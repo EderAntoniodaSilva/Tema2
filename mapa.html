@@ -9,6 +9,7 @@
 
 <body>
 	<header>
+        <nav></nav>
 	<h1>Bem vindo ao mapa saúde</h1>
 	</header>
 
@@ -27,10 +28,10 @@
     maxZoom: 18,
     id: 'your.mapbox.project.id',
     accessToken: 'pk.eyJ1IjoiZWRlcmRhc2lsdmEiLCJhIjoiY2l0MnpvOWhlMHR2MjJwcGd6dWxjdHZvaSJ9.DqBnMNDaFaA7T3GnDcAIuQ'
-}).addTo(mymap);
+    }).addTo(mymap);
 
 	//marcado no mapa
-	var marker = L.marker([-22.86657, -47.21765]).addTo(mymap);
+	var marker = L.marker([-22.86657, -47.21769]).addTo(mymap);
 	//adicionar um popup
 	marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 	//clicar para aparecer popup pode conter HTML
