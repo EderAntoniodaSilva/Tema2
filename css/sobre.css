@@ -1,0 +1,21 @@
+.content p {
+    font-size: 20px;
+}
+
+.author {
+    background-color: #00e995;
+    margin: 10px 20%;
+    padding: 10px;
+    font-size: 1.25em;
+    box-shadow: 10px 10px 5px #888;
+}
+
+.author img {
+    border-radius: 90px;
+}
+
+.author h3 {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
