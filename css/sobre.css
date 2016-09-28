@@ -3,7 +3,7 @@
 }
 
 .author {
-    background-color: #00e995;
+
     margin: 10px 20%;
     padding: 10px;
     font-size: 1.25em;
@@ -12,6 +12,8 @@
 
 .author img {
     border-radius: 90px;
+    width: 100px;
+    height: 100px;
 }
 
 .author h3 {
