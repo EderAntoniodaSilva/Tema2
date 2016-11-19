@@ -1,28 +1,29 @@
+<?php include 'bd/listagemPostos.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> Pontos de saúde publica de Hortolândia</title>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
-	<link rel="stylesheet" type="text/css" href="css/base.css">	
+	<link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 
 <body>
 	<header>
 		<nav>
 		  <ul>
-		  <li><a href="#">Home</a></li> 
-		        <li><a href="formulario.html">Contato</a></li>	
-		  <li><a href="sobre.html">Sobre</a></li>		
+		  <li><a href="#">Home</a></li>
+		        <li><a href="formulario.html">Contato</a></li>
+		  <li><a href="sobre.html">Sobre</a></li>
         </ul>
-		</nav>	
+		</nav>
 	    <h1>Bem vindo ao mapa saúde</h1>
    </header>
 
-	<div id="mapid"></div>	 
+	<div id="mapid"></div>
 	<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
 	<script>
-	
+
 	/* gel locarização do mapa */
 	var mymap = L.map('mapid').setView([-22.870,-47.208,], 13);
 
@@ -37,15 +38,24 @@
     accessToken: 'pk.eyJ1IjoiZWRlcmRhc2lsdmEiLCJhIjoiY2l0MnpvOWhlMHR2MjJwcGd6dWxjdHZvaSJ9.DqBnMNDaFaA7T3GnDcAIuQ'
 	}).addTo(mymap);
 
-	/*marcado no mapa
+	//marcado no mapa
         <?php
-                $localidade = listaLocalidade();
+               foreach ($postos as $posto){
 
-	           echo="$localidade"." = L.marker([$localidade->longitude,-47.2047999]).addTo(mymap).bindPopup("<b> UNIDADE DE SAUDE DA FAMILIA VILLAGIO GHIRALDELLI </b><br> Rua: Osmar Antonio Meira, 300 -Jd. Rosolem.").openPopup();
-                echo "var vetor = "
+                   $latitude = $posto['latitude'];
+                   $longitude = $posto['longitude'];
+                   $nome = $posto['nome_posto'];
+                   $rua = $posto['rua'];
+                   $num = $posto['numero'];
+                   $bairro = $posto['bairro'];
+                   $fone = $posto['fone'];
 
-        <?>
+	               echo "L.marker([$latitude, $longitude]).addTo(mymap)"
+                       .".bindPopup('<b>$nome</b><br><b>Rua: $rua, $numero - $bairro</b><br><b>$fone</b>');";
+                }
+        ?>
 
+/*
 
 	var real = L.marker([-22.8582707,-47.2212522]).addTo(mymap);
 	var amandaII = L.marker([-22.9018496,-47.2423207]).addTo(mymap);
@@ -63,7 +73,7 @@
 	var angulo = L.marker([-22.8820193,-47.1739717]).addTo(mymap);
 	var esmeralda = L.marker([-22.9097535,-47.1921659]).addTo(mymap);
 	var amanda = L.marker([-22.8924168,-47.2346236]).addTo(mymap);
-	
+
 
 	//adicionar um popup
 
@@ -87,7 +97,7 @@
 
 	//clicar para aparecer popup pode conter HTML
 	//var popup = L.popup().setLatLng([-22.8867653,-47.2047999]).setContent("I am a standalone popup.").openOn(mymap);
-	
+
 	//var popup = L.popup();//
 
 	//function onMapClick(e) {
@@ -103,7 +113,7 @@
 	<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
 	<footer>
   	<small>Este site esta bobre a licença  <a href="http://choosealicense.com/licenses/apache-2.0/"> Apache 2.0</a></small>
-	</footer> 
+	</footer>
 
 </body>
 </html>
