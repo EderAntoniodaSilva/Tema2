@@ -7,10 +7,10 @@ $_sql = "select * from PostoDescricao";
         echo "Erro na consulta do banco.".$_conecta->error."<br/>";
     } else{
 
-        echo "Banco lido com sucesso <br/>";
+       /* echo "Banco lido com sucesso <br/>";
 
         $_nr = $_res->num_rows;
-        echo "A consulta retornou ".(int) $_nr . " registros <br/>";
+        echo "A consulta retornou ".(int) $_nr . " registros <br/>";*/
     }
 
     $postos = array();
@@ -21,4 +21,5 @@ $_sql = "select * from PostoDescricao";
 
         array_push($postos, $_localidades);
     }
+$_conecta->close();
 ?>

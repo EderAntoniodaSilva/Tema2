@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Posto</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<body>
+  <header>
+      <ul>
+		   <li><a href="index.php">Home</a></li>
+		   <li><a href="formulario.html">Contato</a></li>
+		   <li><a href="sobre.html">Sobre</a></li>
+           <li><a href="#">Cadastro</a></li>
+        </ul>
+		</nav>
+  </header>
+   <div class="container">
+   <h1>Cadastramento de postos de saude</h1>
+   <form method="POST" action='bd/incluirCadastroPosto.php'>
+  <div class="form-group">
+    <label for="nomePosto">Nome do Posto</label>
+    <input type="text" class="form-control" id="nomePosto" name="nomePosto">
+  </div>
+  <div class="form-group">
+    <label for="rua">Rua</label>
+    <input type="text" class="form-control" id="rua" name="rua">
+  </div>
+
+  <div class="form-group">
+    <label for="numero">Numero</label>
+    <input type="text" class="form-control" id="numero" name="numero">
+  </div>
+
+  <div class="form-group">
+    <label for="bairro">Bairro</label>
+    <input type="text" class="form-control" id="bairro" name="bairro">
+  </div>
+
+  <div class="form-group">
+    <label for="fone">Telefone</label>
+    <input type="text" class="form-control" id="fone" name="fone">
+  </div>
+
+  <div class="form-group">
+    <label for="latitude">Latitude</label>
+    <input type="text" class="form-control" id="latitude" name="latitude">
+  </div>
+
+  <div class="form-group">
+    <label for="longitude">Longitude</label>
+    <input type="text" class="form-control" id="longitude" name="longitude">
+  </div>
+
+
+  <button type="submit" class="btn btn-success">Cadastrar</button>
+</form>
+</div>
+</body>
+</html>
