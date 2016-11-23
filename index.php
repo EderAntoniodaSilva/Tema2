@@ -7,24 +7,25 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstap.css">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-</head>
 
+    <header>
+        <nav>
+          <ul>
+
+              <li><a href="#">Home</a></li>
+              <li><a href="formulario.html">Contato</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="cadastroPosto.html">Cadastro</a></li>
+          </ul>
+        </nav>
+
+    </header>
+</head>
 <body>
     <div class="conteiner">
-	<header>
-		<nav>
-		  <ul>
-		  <li><a href="#">Home</a></li>
-		      <li><a href="formulario.html">Contato</a></li>
-		      <li><a href="sobre.html">Sobre</a></li>
-		      <li><a href="cadastroPosto.html">Cadastro</a></li>
-        </ul>
-		</nav>
-	    <h1>Bem vindo ao mapa saúde</h1>
-   </header>
 
 	<div id="mapid"></div>
-	<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js" ></script>
 	<script>
 
 	/* gel locarização do mapa */

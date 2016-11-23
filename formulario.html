@@ -2,6 +2,7 @@
 <html lang="pt">
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link href="css/estilo.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/base.css">	
 
@@ -15,7 +16,7 @@
                <li><a href="cadastroPosto.html">Cadastro</a></li>
         </ul>
 		</nav>
-<h1><center>Fale Conosco !</h1></center><br>
+
 </header>
 <style>
 
@@ -24,24 +25,26 @@
 </head>
 
 <body background = "img/saude.jpeg">
-
     <div class="conteiner">
-	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
-	<b>Digite aqui o seu nome: </b><input type="text" name="nome" placeholder="" required><br><br><br>
-	<b>Digite aqui o seu E-mail:</b><input type="text" name="email" placeholder="" required><br><br><br>
-	<b>Digite aqui o seu CPF:</b><input type="number" name="numero" placeholder="" required>
-	<br><br><br>
-	
-	<p><b> Digite aqui às suas dúvidas referente ao site: </p></b>
-	<textarea rows="3" cols="60" name="feedback"></textarea><br><br>
+    <h1><center>Fale Conosco !</h1></center><br>
+        <form action="bd/formulario.php" method="POST">
+        <b>Digite aqui o seu nome: </b>
+        <input type="text" name="nome" placeholder="" required><br><br><br>
+        <b>Digite aqui o seu E-mail:</b>
+        <input type="text" name="email" placeholder="" required><br><br><br>
+        <b>Digite aqui o seu CPF:</b>
+        <input type="number" name="numero" placeholder="" required><br><br><br>
 
-	<input type="submit">
-	</form>
-	<br><br><br><br><br><br><br><br><br>
+        <p><b> Digite aqui às suas dúvidas referente ao site: </p></b>
+        <textarea rows="3" cols="60" name="feedback"></textarea><br><br>
 
-    <footer>
-  	<small>Este site esta bobre a licença  <a href="http://choosealicense.com/licenses/apache-2.0/"> Apache 2.0</a></small>
-	</footer>
+        <button type="submit" class=" btn btn-primary">Enviar</button>
+        </form>
+        <br><br><br><br><br><br><br><br><br>
+
+        <footer>
+        <small>Este site esta bobre a licença  <a href="http://choosealicense.com/licenses/apache-2.0/"> Apache 2.0</a></small>
+        </footer>
     </div>
 
 </body>
