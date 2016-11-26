@@ -20,7 +20,7 @@ if($_res === FALSE){
     echo $_conecta->affected_rows . " Registros incluidos com sucesso<br/>";
 }
 $_conecta->close();
-include("index.php")
+include("index.php");
 
 
 ?>
