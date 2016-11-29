@@ -20,9 +20,12 @@ if($_res === FALSE){
     echo $_conecta->affected_rows . " Registros incluidos com sucesso<br/>";
 }
 $_conecta->close();
-include ('../email.php');
+include ('../temail.php');
+enviarEmail($nome, $email, $cpf, $feedback);
 
-header('Location:../index.php');
+
+
+//header('Location:../index.php');
 
 
 ?>

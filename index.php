@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> Pontos de saúde publica de Hortolândia</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 
